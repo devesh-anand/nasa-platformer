@@ -37,6 +37,7 @@ function preload() {
       frameHeight: 256,
       frameWidth: 256,
    });
+   this.load.image("seabed", "assets/water/fishTile_036.png");
    this.load.image("tile", "assets/water/fishTile_038.png");
    this.load.image("fish1", "assets/water/fishTile_078.png");
    this.load.image("fish2", "assets/water/fishTile_079.png");
@@ -58,14 +59,16 @@ function create() {
 
    platforms.create(400, 10, "ground").setScale(6).refreshBody();
 
-   platforms.create(600, 400, "ground");
+   //    platforms.create(600, 400, "ground");
    platforms.create(50, 250, "ground");
    platforms.create(750, 220, "ground");
 
    player = this.physics.add.sprite(100, 250, "fish");
 
    player.setBounce(0.2);
-   player.setCollideWorldBounds(true); //understand
+   player.setCollideWorldBounds(true);
+
+   repeatBlocks(22, -32, window.innerHeight + 24, "seabed");
 
    this.anims.create({
       key: "left",
@@ -120,9 +123,9 @@ function repeatBlocks(count, startIndex, endIndex, sprite) {
    var platformSpriteStart = startIndex;
    while (platformSpriteCount--) {
       platforms.create(
-         platformSpriteStart + (5 - platformSpriteCount) * 64,
+         platformSpriteStart + (count - platformSpriteCount) * 64,
          endIndex,
-         "tile"
+         sprite
       );
    }
 }
