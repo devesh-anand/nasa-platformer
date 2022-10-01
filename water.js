@@ -18,6 +18,7 @@ var config = {
 
 var player;
 var platforms;
+var floor;
 var stars;
 var score = 0;
 var scoreText;
@@ -32,12 +33,19 @@ let keyW;
 var game = new Phaser.Game(config);
 
 function preload() {
+   this.load.spritesheet("fish", "assets/sheet/fishes.png", {
+      frameHeight: 256,
+      frameWidth: 256,
+   });
+   this.load.image("tile", "assets/water/fishTile_038.png");
+   this.load.image("fish1", "assets/water/fishTile_078.png");
+   this.load.image("fish2", "assets/water/fishTile_079.png");
    this.load.image("sky", "assets/sky.png");
    this.load.image("ground", "assets/platform.png");
    this.load.image("star", "assets/star.png");
    this.load.image("bomb", "assets/bomb.png");
    this.load.spritesheet("dude", "assets/dude.png", {
-      frameWidth: 32,
+      frameWidth: 48,
       frameHeight: 48,
    });
 }
@@ -48,33 +56,33 @@ function create() {
 
    platforms = this.physics.add.staticGroup();
 
-   platforms.create(400, 568, "ground").setScale(6).refreshBody();
+   platforms.create(400, 10, "ground").setScale(6).refreshBody();
 
    platforms.create(600, 400, "ground");
    platforms.create(50, 250, "ground");
    platforms.create(750, 220, "ground");
 
-   player = this.physics.add.sprite(100, 450, "dude");
+   player = this.physics.add.sprite(100, 250, "fish");
 
    player.setBounce(0.2);
    player.setCollideWorldBounds(true); //understand
 
    this.anims.create({
       key: "left",
-      frames: this.anims.generateFrameNumbers("dude", { start: 0, end: 3 }),
+      frames: this.anims.generateFrameNumbers("fish", { start: 7, end: 11 }),
       frameRate: 10,
       repeat: -1,
    });
 
    this.anims.create({
       key: "turn",
-      frames: [{ key: "dude", frame: 4 }],
+      frames: [{ key: "fish", frame: 1 }],
       frameRate: 20,
    });
 
    this.anims.create({
       key: "right",
-      frames: this.anims.generateFrameNumbers("dude", { start: 5, end: 8 }),
+      frames: this.anims.generateFrameNumbers("fish", { start: 0, end: 5 }),
       frameRate: 10,
       repeat: -1,
    });
@@ -105,6 +113,18 @@ function create() {
    this.physics.add.overlap(player, stars, collectStar, null, this);
 
    this.physics.add.collider(player, bombs, hitBomb, null, this);
+}
+
+function repeatBlocks(count, startIndex, endIndex, sprite) {
+   var platformSpriteCount = count;
+   var platformSpriteStart = startIndex;
+   while (platformSpriteCount--) {
+      platforms.create(
+         platformSpriteStart + (5 - platformSpriteCount) * 64,
+         endIndex,
+         "tile"
+      );
+   }
 }
 
 function update() {
