@@ -60,8 +60,8 @@ function create() {
    platforms.create(400, 10, "ground").setScale(6).refreshBody();
 
    //    platforms.create(600, 400, "ground");
-   platforms.create(50, 250, "ground");
-   platforms.create(750, 220, "ground");
+   //    platforms.create(50, 250, "ground");
+   //    platforms.create(750, 220, "ground");
 
    player = this.physics.add.sprite(100, 250, "fish");
 
@@ -188,6 +188,7 @@ function hitBomb(player, bomb) {
    player.setTint(0xff0000);
 
    player.anims.play("turn");
+   alert("booooooooooooooooomb");
 
    gameOver = true;
 }
