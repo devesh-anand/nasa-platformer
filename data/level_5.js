@@ -1,0 +1,265 @@
+const level_5 = [
+  {
+    time: 40,
+    powerup: 0,
+    y: 360,
+  },
+  {
+    time: 40,
+    powerup: 1,
+    y: 260,
+  },
+  {
+    time: 40,
+    powerup: 2,
+    y: 460,
+  },
+  {
+    time: 200,
+    enemy: 1,
+    path: 0,
+    duration: 30000,
+  },
+  {
+    time: 200,
+    enemy: 1,
+    path: 1,
+    duration: 30000,
+  },
+  {
+    time: 200,
+    enemy: 1,
+    path: 2,
+    duration: 30000,
+  },
+  {
+    time: 200,
+    enemy: 1,
+    path: 3,
+    duration: 30000,
+  },
+  {
+    time: 200,
+    enemy: 1,
+    path: 4,
+    duration: 30000,
+  },
+  {
+    time: 200,
+    enemy: 1,
+    path: 5,
+    duration: 30000,
+  },
+  {
+    time: 200,
+    enemy: 1,
+    path: 6,
+    duration: 30000,
+  },
+  {
+    time: 200,
+    enemy: 1,
+    path: 7,
+    duration: 30000,
+  },
+  {
+    time: 200,
+    enemy: 1,
+    path: 8,
+    duration: 30000,
+  },
+  {
+    time: 200,
+    enemy: 1,
+    path: 9,
+    duration: 30000,
+  },
+  {
+    time: 200,
+    asteroid: 1,
+    speed: 2,
+  },
+  {
+    time: 200,
+    asteroid: 1,
+    speed: 2,
+  },
+  {
+    time: 200,
+    asteroid: 1,
+    speed: 2,
+  },
+  {
+    time: 200,
+    asteroid: 1,
+    speed: 2,
+  },
+  {
+    time: 200,
+    asteroid: 1,
+    speed: 2,
+  },
+  {
+    time: 200,
+    asteroid: 1,
+    speed: 2,
+  },
+  {
+    time: 500,
+    enemy: 2,
+    path: 0,
+    duration: 30000,
+  },
+  {
+    time: 500,
+    enemy: 2,
+    path: 1,
+    duration: 30000,
+  },
+  {
+    time: 500,
+    enemy: 2,
+    path: 2,
+    duration: 30000,
+  },
+  {
+    time: 500,
+    enemy: 2,
+    path: 3,
+    duration: 30000,
+  },
+  {
+    time: 500,
+    enemy: 2,
+    path: 4,
+    duration: 30000,
+  },
+  {
+    time: 500,
+    enemy: 2,
+    path: 5,
+    duration: 30000,
+  },
+  {
+    time: 500,
+    enemy: 2,
+    path: 6,
+    duration: 30000,
+  },
+  {
+    time: 500,
+    enemy: 2,
+    path: 7,
+    duration: 30000,
+  },
+  {
+    time: 500,
+    enemy: 2,
+    path: 8,
+    duration: 30000,
+  },
+  {
+    time: 500,
+    enemy: 2,
+    path: 9,
+    duration: 30000,
+  },
+  {
+    time: 1000,
+    enemy: 4,
+    path: 5,
+    duration: 30000,
+  },
+  {
+    time: 1000,
+    enemy: 4,
+    path: 6,
+    duration: 30000,
+  },
+  {
+    time: 1000,
+    enemy: 4,
+    path: 7,
+    duration: 30000,
+  },
+  {
+    time: 1400,
+    asteroid: 2,
+    speed: 2,
+  },
+  {
+    time: 1400,
+    asteroid: 2,
+    speed: 2,
+  },
+  {
+    time: 1400,
+    asteroid: 2,
+    speed: 2,
+  },
+  {
+    time: 1400,
+    asteroid: 2,
+    speed: 2,
+  },
+  {
+    time: 1400,
+    asteroid: 2,
+    speed: 2,
+  },
+  {
+    time: 1500,
+    enemy: 6,
+    path: 6,
+    duration: 30000,
+  },
+  {
+    time: 1500,
+    enemy: 6,
+    path: 7,
+    duration: 30000,
+  },
+  {
+    time: 1500,
+    enemy: 6,
+    path: 8,
+    duration: 30000,
+  },
+  {
+    time: 2000,
+    asteroid: 2,
+    speed: 5,
+  },
+  {
+    time: 2000,
+    asteroid: 2,
+    speed: 5,
+  },
+  {
+    time: 2000,
+    asteroid: 2,
+    speed: 5,
+  },
+  {
+    time: 2000,
+    asteroid: 2,
+    speed: 5,
+  },
+  {
+    time: 2000,
+    asteroid: 2,
+    speed: 5,
+  },
+  {
+    time: 2000,
+    asteroid: 2,
+    speed: 5,
+  },
+  {
+    time: 3000,
+    boss: 1,
+  },
+];
+try {
+  module.exports = level_5;
+} catch (err) {}
